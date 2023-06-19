@@ -1,0 +1,29 @@
+recipe: default.v1
+assistant_id: form_bot
+language: en
+
+pipeline:
+  - name: SpacyNLP
+    model: "en_core_web_md"
+    # would case sensitivity help with extracting name entities?
+    case_sensitive: False
+  - name: SpacyTokenizer
+    "intent_tokenization_flag": True
+    "intent_split_symbol": "+"
+    #"token_pattern": None
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: SpacyFeaturizer
+  - name: RegexFeaturizer
+    case_sensitive: False
+    use_lookup_tables: True
+  - name: LexicalSyntacticFeaturizer
+  - name: SpacyEntityExtractor
+    # want only Duckling  to handle date and time (Spacy does not have this built-in for French)
+    dimensions: ["PERSON"]
+  - name: DIETClassifier
+    epochs: 100
+  - name: EntitySynonymMapperpolicies:

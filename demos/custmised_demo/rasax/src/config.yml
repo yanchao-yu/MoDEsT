@@ -1,0 +1,25 @@
+language: en
+pipeline:
+- name: SpacyNLP
+  model: en_core_web_md
+  case_sensitive: false
+- name: SpacyTokenizer
+  intent_tokenization_flag: true
+  intent_split_symbol: +
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: SpacyFeaturizer
+- name: RegexFeaturizer
+  case_sensitive: false
+  use_lookup_tables: true
+- name: LexicalSyntacticFeaturizer
+- name: SpacyEntityExtractor
+  dimensions:
+  - PERSON
+- name: DIETClassifier
+  epochs: 100
+- name: EntitySynonymMapper
+assistant_id: 20230330-231447-burgundy-caramel

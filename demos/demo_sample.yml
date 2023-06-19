@@ -1,0 +1,5 @@
+title: MoDEsT Demo
+description: MoDEsT has been designed to support academic and industrial evaluations and demonstrations of the conversational agent. Participants at the conference will be able to view the presentation live via a computer interface on various devices. We will provide multiple devices where users can configure the conversation platform and share the example link with colleagues. We will also offer a basic conversation tools guide to help you build up the dialogue exercise or showcase. The demo is speech- and text-based; virtual and in-person participants can view the entry.
+url: http://localhost:5005/webhooks/rest/webhook
+input_json: {"sender": "tester", "message": "hi pal!"}
+output_json: [{"recipient_id": "tester", "text": "Hello! I am restaurant search assistant! How can I help?"},{"image": "http://example.com/image.jpg"}]

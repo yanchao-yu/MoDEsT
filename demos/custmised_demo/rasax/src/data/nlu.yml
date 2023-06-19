@@ -1,0 +1,69 @@
+version: "2.0"
+nlu:
+- intent: greeting
+  examples: |
+    - hey
+    - hello
+    - hi
+    - i want to cook
+    - i want to make a meal
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - let's go
+    - hey dude
+    - good morning
+    - good evening
+    - good afternoon
+    - yo
+    - hello world
+    - hi there
+
+- intent: greeting_acknowledgement
+  examples: |
+    - I'm fine, thanks
+    - I am okay
+    - I am fine
+    - not bad
+
+- intent: movie_recommendation
+  examples: |
+    - can you recommend a movie
+    - can you suggust a movie
+    - can you help me find a movie
+    - do you know which movie is good for me
+    - do you know which movie is interesting
+    - any interesting movies
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - thanks, goodbye
+
+- intent: appreciation
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - you are very good
+    - you are great
+    - you are amazing
+    - you are saing the world
+    - you are saing my world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect

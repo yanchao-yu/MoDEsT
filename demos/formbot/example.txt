@@ -1,0 +1,4 @@
+url: http://localhost:5005/webhooks/rest/webhook
+input_json: {"sender": "tester", "message": "hi pal!"}
+input_json: {"sender": "tester", "message": {"text":"hi pal!"}}
+output_json: [{"recipient_id": "tester", "text": "Hello! I am restaurant search assistant! How can I help?"},{"image": "http://example.com/image.jpg"}]
